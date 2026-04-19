@@ -5,7 +5,10 @@ Este projeto contém duas funções JavaScript simples para validar CPF e buscar
 ## Arquivos
 
 - `copilot_cpf.js` - valida CPF com ou sem pontuação.
-- `copilot_api.js` - busca endereço a partir de um CEP usando a API ViaCEP.
+- `copilot_api.js` - busca endereço a partir de um CEP usando
+ a API ViaCEP.
+ - `.vscode/Lista.js` - lista
+
 
 ## Instalação
 
@@ -33,6 +36,18 @@ node copilot_api.js
 Esse script demonstra a função `fetchAddressByCEP` buscando dados de endereço a partir de CEPs válidos e inválidos.
 
 > Observação: `copilot_api.js` faz requisições HTTP para a API ViaCEP, então precisa de conexão com a internet.
+
+### Executar `server.js`
+
+```bash
+node server.js
+```
+
+Inicia um servidor HTTP simples em `http://localhost:3000` com essas rotas:
+
+- `GET /health` retorna um JSON com `status: 'ok'` e `uptime`.
+- `GET /users/:id` retorna um usuário estático pelo `id` ou `404` se não existir.
+- `POST /sum` aceita JSON com `a` e `b` numéricos e retorna `{ a, b, sum }`.
 
 ## Descrição rápida das funções
 
